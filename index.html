@@ -17,48 +17,141 @@
         <h3 class="text-xs font-medium">Kec. Beji, Gununggangsir, Banggle</h3>
       </div>
     </a>
-    <ul class="flex space-x-8 font-medium text-gray-900">
-    <li><a href="#" class="hover:text-green-600">Beranda</a></li>
-    <li class="relative group">
-    <a href="#" class="hover:text-green-600">Informasi</a>
-    <ul
-      class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100">
-      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Pengumuman Sekolah</a></li>
-      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Panduan Website</a></li>
-      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">FAQ</a></li>
-    </ul>
-  </li>
-    </li>
-    <li class="relative group">
-    <a href="#" class="hover:text-green-600">Jadwal</a>
-    <ul
-      class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100">
-      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Mata Pelajaran</a></li>
-      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Kegiatan Sekolah</a></li>
-      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Ujian UTS/UAS</a></li>
-    </ul>
-  </li>
-      <li><a href="#" class="hover:text-green-600">Kontak</a></li>
-    </ul>
-    <button id="loginBtn"
-      class="flex items-center gap-2 px-4 py-2 bg-yellow-400 hover:bg-yellow-500 
-             text-black font-semibold rounded-lg shadow focus:outline-none">
-      <svg xmlns="http://www.w3.org/2000/svg" 
-           class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-              d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M18 12h-9m0 0l3-3m-3 3l3 3" />
-      </svg>
-      Login
+    <button id="hamburgerBtn" class="md:hidden flex flex-col space-y-1.5 w-8 h-8 focus:outline-none">
+      <span class="block h-1 w-full bg-black rounded"></span>
+      <span class="block h-1 w-full bg-black rounded"></span>
+      <span class="block h-1 w-full bg-black rounded"></span>
     </button>
-  <ul id="loginDropdown"
-      class="absolute right-4 top-20 w-44 bg-white shadow-lg rounded-lg overflow-hidden
-             opacity-0 scale-y-0 origin-top transition-all duration-300 ease-in-out hidden">
-    <li><a href="/exfile/loginsiswa.html" class="block px-4 py-2 hover:bg-yellow-100">Login Siswa/Siswi</a></li>
-    <li><a href="/exfile/loginadmin.html" class="block px-4 py-2 hover:bg-yellow-100">Login Administrator</a></li>
-    <li><a href="/exfile/loginpengawas.html" class="block px-4 py-2 hover:bg-yellow-100">Login Pengawas</a></li>
-  </ul>
+    <ul class="hidden md:flex space-x-8 font-medium text-gray-900">
+      <li><a href="#" class="hover:text-green-600">Beranda</a></li>
+      <li class="relative group">
+        <a href="#" class="hover:text-green-600">Informasi</a>
+        <ul class="z-50 absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100">
+          <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Pengumuman Sekolah</a></li>
+          <li><a href="/exfile/beritapage.html" class="block px-4 py-2 hover:bg-green-100">Berita Sekolah</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Panduan Website</a></li>
+          <li><a href="/exfile/brosur.html" class="block px-4 py-2 hover:bg-green-100">Brosur PPDB</a><li>
+          <li><a href="https://hdmadrasah.id/login/auth" class="block px-4 py-2 hover:bg-green-100">RDM Login</a></li>
+        </ul>
+      </li>
+      <li class="relative group">
+        <a href="#" class="hover:text-green-600">Jadwal</a>
+        <ul class="z-50 absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100">
+          <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Mata Pelajaran</a></li>
+          <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Kegiatan Sekolah</a></li>
+          <li><a href="/exfile/kaldikma.html" class="block px-4 py-2 hover:bg-green-100">Kalender Pendidikan</a></li>
+          <li><a href="/exfile/jadwalujian.html" class="block px-4 py-2 hover:bg-green-100">Ujian UTS/UAS</a></li>
+        </ul>
+      </li>
+      <li><a href="/exfile/kontak.html" class="hover:text-green-600">Kontak</a></li>
+    </ul>
+
+    <!-- Menu Login Desktop -->
+    <div class="hidden md:block relative ml-33">
+      <button id="loginBtn"
+        class="flex items-center gap-2 px-4 py-2 bg-yellow-400 hover:bg-yellow-500 
+               text-black font-semibold rounded-lg shadow focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" 
+             class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M18 12h-9m0 0l3-3m-3 3l3 3" />
+        </svg>
+        Login
+      </button>
+      <ul id="loginDropdown"
+          class="z-50 absolute right-0 mt-2 w-44 bg-white shadow-lg rounded-lg overflow-hidden
+                 opacity-0 scale-y-0 origin-top transition-all duration-300 ease-in-out hidden z-50">
+        <li><a href="/exfile/loginadmin.php" class="block px-4 py-2 hover:bg-yellow-100">Login Administrator</a></li>
+        <li><a href="/exfile/loginpengawas.html" class="block px-4 py-2 hover:bg-yellow-100">Login Pengawas</a></li>
+        <li><a href="/exfile/loginsiswa.html" class="block px-4 py-2 hover:bg-yellow-100">Login Siswa/Siswi</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
+<div id="mobileMenu" class="md:hidden fixed top-0 right-0 h-full w-64 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out z-50 overflow-y-auto">
+    <div class="p-4">
+        <button id="closeBtn" class="float-right text-2xl leading-none">&times;</button>
+        <div class="clear-both"></div>
+    </div>
+    <ul class="flex flex-col p-4 space-y-2 font-medium text-gray-900">
+        <li><a href="#" class="block hover:text-green-600 py-2 px-4">Beranda</a></li>
+
+        <li>
+          <button class="w-full text-left hover:text-green-600 py-2 px-4 flex justify-between items-center dropdown-btn">
+            Informasi
+            <svg class="w-4 h-4 inline-block transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-li necap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <ul class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out flex flex-col mt-1 space-y-1">
+            <li><a href="/exfile/pengumumansekolah.php" class="block hover:bg-green-100 rounded py-1 px-4 ml-4">Pengumuman Sekolah</a></li>
+            <li><a href="#" class="block hover:bg-green-100 rounded py-1 px-4 ml-4">Panduan Website</a></li>
+            <li><a href="/exfile/brosur.html" class="block hover:bg-green-100 rounded py-1 px-4 ml-4">Brosur PPDB</a></li>
+            <li><a href="https://hdmadrasah.id/login/auth" class="block px-4 py-2 hover:bg-green-100">RDM Login</a></li>
+          </ul>
+        </li>
+        <li>
+            <button class="w-full text-left hover:text-green-600 py-2 px-4 flex justify-between items-center gap-2 dropdown-btn">
+              Jadwal
+              <svg class="w-4 h-4 inline-block transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <ul class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out flex flex-col mt-1 space-y-1">
+                <li><a href="#" class="block hover:bg-green-100 rounded py-1 px-4 ml-4">Mata Pelajaran</a></li>
+                <li><a href="#" class="block hover:bg-green-100 rounded py-1 px-4 ml-4">Kegiatan Sekolah</a></li>
+                <li><a href="/exfile/kaldikma.html" class="block hover:bg-green-100 rounded py-1 px-4 ml-4">Kalender Pendidikan</a></li>
+                <li><a href="/exfile/jadwalujian.html" class="block hover:bg-green-100 rounded py-1 px-4 ml-4">Ujian UTS/UAS</a></li>
+            </ul>
+        </li>
+        <li><a href="#" class="block hover:text-green-600 py-2 px-4">Kontak</a></li>
+        <li class="mt-4">
+            <button class="w-full text-left px-4 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg dropdown-btn flex justify-between items-center">
+              Login
+              <svg class="w-4 h-4 inline-block transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <ul class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out flex flex-col mt-1 space-y-1">
+              <li><a href="/exfile/loginadmin.html" class="block px-4 py-2 hover:bg-yellow-100 ml-4">Login Administrator</a></li>
+              <li><a href="/exfile/loginpengawas.html" class="block px-4 py-2 hover:bg-yellow-100 ml-4">Login Pengawas</a></li>
+              <li><a href="/exfile/loginsiswa.html" class="block px-4 py-2 hover:bg-yellow-100 ml-4">Login Siswa/Siswi</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<section class="relative w-full h-screen overflow-hidden">
+  <div id="slider" class="flex w-full h-full transition-transform duration-700">
+    <div class="flex-shrink-0 w-full h-full">
+      <img src="https://picsum.photos/id/1018/1600/900" 
+           class="w-full h-full object-cover" alt="Slide 1">
+    </div>
+    <div class="flex-shrink-0 w-full h-full">
+      <img src="https://picsum.photos/id/1015/1600/900" 
+           class="w-full h-full object-cover" alt="Slide 2">
+    </div>
+    <div class="flex-shrink-0 w-full h-full">
+      <img src="https://picsum.photos/id/1019/1600/900" 
+           class="w-full h-full object-cover" alt="Slide 3">
+    </div>
+  </div>
+<div class="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
+  <div class="absolute inset-0 flex items-center justify-center text-center">
+    <h1 id="fadeText" 
+        class="text-white text-4xl md:text-6xl font-bold opacity-0 transition-opacity duration-1000">
+      Welcome to MA Hasan Munadi
+    </h1>
+  </div>
+  <button onclick="prevSlide()" 
+          class="absolute top-1/2 left-4 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70"> 
+    &#10094;  
+  </button>
+  <button onclick="nextSlide()" 
+          class="absolute top-1/2 right-4 -translate-y-1/2 bg-black/50 text-white p-3 rounded-full hover:bg-black/70"> 
+    &#10095; 
+  </button>
+</section>
 </body>
 <script src="/js/script.js"></script>
+<script src="/js/textslider.js"></script>
 </html>
