@@ -4,36 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <title>MA Hasan Munadi - Beji</title>
 </head>
 <body>
 <nav class="bg-white shadow-md">
   <div class="mx-auto flex items-center justify-between p-4">
-    <!-- Logo -->
     <a href="#" class="flex items-center space-x-3">
-      <img src="../image/logonav.png" class="h-12" alt="Logo">
+      <img src="/image/logonav.png" class="h-12" alt="Logo">
       <div class="flex flex-col">
         <span class="text-xl font-bold">MA Hasan Munadi</span>
-        <h2 class="text-sm font-medium">Lembaga Pendidikan Ma'Arif</h2>
-        <h3 class="text-sm font-medium">Jln. KH, Jl. Hasan Munadi No.13, Banggle</h3>
+        <h2 class="text-xs font-medium">Lembaga Pendidikan Ma'Arif - Swasta</h2>
+        <h3 class="text-xs font-medium">Kec. Beji, Gununggangsir, Banggle</h3>
       </div>
     </a>
-    <!-- Menu tengah -->
     <ul class="flex space-x-8 font-medium text-gray-900">
-      <li><a href="#" class="hover:text-green-600">Home</a></li>
-      <li><a href="#" class="hover:text-green-600">About</a></li>
-      <li><a href="#" class="hover:text-green-600">Services</a></li>
+    <li><a href="#" class="hover:text-green-600">Beranda</a></li>
+    <li class="relative group">
+    <a href="#" class="hover:text-green-600">Informasi</a>
+    <ul
+      class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100">
+      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Pengumuman Sekolah</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Panduan Website</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">FAQ</a></li>
     </ul>
-    <!-- Search kanan -->
-    <form class="flex items-center space-x-2">
-      <input type="text" placeholder="Search..."
-        class="border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-green-500">
-      <button type="submit"
-        class="px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-lg hover:bg-green-700">
-        Search
-      </button>
-    </form>
+  </li>
+    </li>
+    <li class="relative group">
+    <a href="#" class="hover:text-green-600">Jadwal</a>
+    <ul
+      class="absolute left-0 mt-2 w-40 bg-white shadow-lg rounded-lg opacity-0 scale-y-0 origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100">
+      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Mata Pelajaran</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Kegiatan Sekolah</a></li>
+      <li><a href="#" class="block px-4 py-2 hover:bg-green-100">Ujian UTS/UAS</a></li>
+    </ul>
+  </li>
+      <li><a href="#" class="hover:text-green-600">Kontak</a></li>
+    </ul>
+    <button id="loginBtn"
+      class="flex items-center gap-2 px-4 py-2 bg-yellow-400 hover:bg-yellow-500 
+             text-black font-semibold rounded-lg shadow focus:outline-none">
+      <svg xmlns="http://www.w3.org/2000/svg" 
+           class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+              d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M18 12h-9m0 0l3-3m-3 3l3 3" />
+      </svg>
+      Login
+    </button>
+  <ul id="loginDropdown"
+      class="absolute right-4 top-20 w-44 bg-white shadow-lg rounded-lg overflow-hidden
+             opacity-0 scale-y-0 origin-top transition-all duration-300 ease-in-out hidden">
+    <li><a href="/exfile/loginsiswa.html" class="block px-4 py-2 hover:bg-yellow-100">Login Siswa/Siswi</a></li>
+    <li><a href="/exfile/loginadmin.html" class="block px-4 py-2 hover:bg-yellow-100">Login Administrator</a></li>
+    <li><a href="/exfile/loginpengawas.html" class="block px-4 py-2 hover:bg-yellow-100">Login Pengawas</a></li>
+  </ul>
   </div>
 </nav>
 </body>
+<script src="/js/script.js"></script>
 </html>
